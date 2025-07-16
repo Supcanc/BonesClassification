@@ -7,20 +7,38 @@ This project can be used for classification of bones CT scans for 2 classes: fra
 1. One your terminal and paste there command: 
 
 ```git clone https://github.com/Supcanc/BonesClassification```.
+
+
 2. Load images that you want to predict in images_to_predict/ directory.
+
+
 3. Enable your Docker.
+
+
 4. Type in the terminal(in the project diretctory) this command: 
 
 ```docker-compose build```.
+
+
 5. Then type another command in this directory:
 
 ```docker-compose up```.
+
+
 6. You'll see a link in a terminal, click on it and then add /docs to the end of this link and you'll be taken to this page:
 ![img.png](images_for_readme/main_page.png)
 7. Click on button 'GET'.
+
+
 8. Click on button 'Try it out'.
+
+
 9. Type images_to_predict in description input window.
+
+
 10. Click button 'Execute'.
+
+
 11. Check if the response is same:
 ![img.png](images_for_readme/response.png)
 12. There will be file predictions.txt in your project directory with all your predictions.
