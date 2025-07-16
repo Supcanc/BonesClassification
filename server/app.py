@@ -7,7 +7,7 @@ from PIL import Image
 
 app = FastAPI()
 
-model = tf.keras.models.load_model('../models/model.keras')
+model = tf.keras.models.load_model('models/model.keras')
 
 @app.get('/predict/{images_path:path}')
 def predict(images_path: str):
@@ -28,7 +28,7 @@ def predict(images_path: str):
         predicted_probabilities = model.predict(images)
         predicted_classes = np.round(predicted_probabilities)
 
-        with open('../predictions.txt', 'w') as f:
+        with open('predictions.txt', 'w') as f:
             for i in range(len(predicted_classes)):
                 f.write(f'{i + 1}) Filename: {images_names[i]}\n'
                         f'Class: {classes[int(predicted_classes[i][0])]}\n'
@@ -40,4 +40,4 @@ def predict(images_path: str):
         raise HTTPException(status_code=404, detail=str(e))
 
 if __name__ == '__main__':
-    uvicorn.run('server.app:app')
+    uvicorn.run(app, host='0.0.0.0', port=80)
