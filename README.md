@@ -47,10 +47,6 @@ This project can be used for classification of bones CT scans for 2 classes: fra
 
 This project uses the [X-Ray Imaging Dataset for Detecting Fractured vs. Non-Fractured Bones](https://www.kaggle.com/datasets/foyez767/x-ray-images-of-fractured-and-healthy-bones), originally created by Nayem et al. (2025) and sourced from Mendeley Data. The dataset was obtained via Kaggle.
 
-# License
-
-The dataset is shared under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
-
 # Citation
 
 @dataset{nayem2025xray,
